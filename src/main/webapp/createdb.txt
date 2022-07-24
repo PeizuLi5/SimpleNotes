@@ -1,0 +1,10 @@
+CREATE TABLE users (username VARCHAR(25) PRIMARY KEY, password VARCHAR(20) NOT NULL, security_question VARCHAR(255) NOT NULL, security_answer VARCHAR(255) NOT NULL);
+CREATE TABLE notes (Nid NUMBER GENERATED ALWAYS as IDENTITY(START with 1 INCREMENT by 1), title VARCHAR(255), content CLOB, PRIMARY KEY(Nid));
+CREATE TABLE login_info (login_id NUMBER GENERATED ALWAYS as IDENTITY(START with 1 INCREMENT by 1), PRIMARY KEY(login_id));
+CREATE TABLE logout_info (logout_id NUMBER GENERATED ALWAYS as IDENTITY(START with 1 INCREMENT by 1), PRIMARY KEY(logout_id));
+CREATE TABLE share_notes (username VARCHAR(50), share_user VARCHAR(50), Nid INTEGER, PRIMARY KEY(username, share_user, Nid), FOREIGN KEY(username) REFERENCES users(username) ON DELETE CASCADE, FOREIGN KEY(share_user) REFERENCES users(username) ON DELETE CASCADE,FOREIGN KEY(Nid) REFERENCES notes(Nid) ON DELETE CASCADE);
+CREATE TABLE author (username VARCHAR(50), Nid INTEGER, PRIMARY KEY(username, Nid), FOREIGN KEY(username) REFERENCES users(username) ON DELETE CASCADE, FOREIGN KEY(Nid) REFERENCES notes(Nid) ON DELETE CASCADE);
+CREATE TABLE contain (username VARCHAR(50), Nid INTEGER, PRIMARY KEY(username, Nid), FOREIGN KEY(username) REFERENCES users(username) ON DELETE CASCADE, FOREIGN KEY(Nid) REFERENCES notes(Nid) ON DELETE CASCADE);
+CREATE TABLE edit_time (Nid INTEGER PRIMARY KEY, edit_time TIMESTAMP, FOREIGN KEY(Nid) REFERENCES notes(Nid) ON DELETE CASCADE);
+CREATE TABLE login (username VARCHAR(50), login_id INTEGER, dates TIMESTAMP, PRIMARY KEY(username, login_id), FOREIGN KEY(username) REFERENCES users(username) ON DELETE CASCADE, FOREIGN KEY(login_id) REFERENCES login_info(login_id) ON DELETE SET NULL);
+CREATE TABLE logout (username VARCHAR(50), logout_id INTEGER, dates TIMESTAMP, PRIMARY KEY(username, logout_id), FOREIGN KEY(username) REFERENCES users(username) ON DELETE CASCADE, FOREIGN KEY(logout_id) REFERENCES logout_info(logout_id) ON DELETE SET NULL);

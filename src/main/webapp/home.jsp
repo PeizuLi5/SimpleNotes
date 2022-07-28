@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="Applications.DBUtils,oracle.jdbc.*" %>
+<%@ page import="Applications.*,oracle.jdbc.*" %>
 <!DOCTYPE html>
 <html>
 <head>

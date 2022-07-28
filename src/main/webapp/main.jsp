@@ -46,7 +46,12 @@
 	}
 </style>
 
+<% String s = (String) request.getAttribute("user");%>
+
 <body>
+	<h1 align="center">
+		Welcome! <%= s.toString().toUpperCase() %>
+	</h1>
 	<div align="right">
 		<form class="users" action="setting" method="post">
 			<button class="userBtn settingBtn">Setting</button>
@@ -57,10 +62,9 @@
 	</div>
 	
 	<div align="center">
-		<h1>Welcome</h1>
-			<form action="create" method="post">
-				<button class="createBtn">+</button>
-			</form>
+		<form action="toCreate" method="post">
+			<button class="createBtn">+</button>
+		</form>
 	</div>
 </body>
 </html>

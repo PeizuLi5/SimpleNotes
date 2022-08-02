@@ -2,6 +2,7 @@ package servlets;
 
 import java.io.IOException;
 
+import Applications.DBUtils;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
@@ -9,15 +10,15 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class ForgetPasswordServlet
+ * Servlet implementation class LogoutServlet
  */
-public class ForgetPasswordServlet extends HttpServlet {
+public class LogoutServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ForgetPasswordServlet() {
+    public LogoutServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -26,9 +27,12 @@ public class ForgetPasswordServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String path = "forget1.jsp";
-		RequestDispatcher dispatcher = request.getRequestDispatcher(path);
-		dispatcher.forward(request, response);
+		String username = request.getParameter("user");
+		DBUtils.logout(username);
+		
+		String resultPage = "home.jsp";
+        RequestDispatcher dispatcher = request.getRequestDispatcher(resultPage);
+        dispatcher.forward(request, response);
 	}
 
 	/**

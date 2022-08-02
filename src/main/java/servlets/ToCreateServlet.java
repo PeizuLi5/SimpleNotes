@@ -9,15 +9,15 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class ForgetPasswordServlet
+ * Servlet implementation class ToCreateServlet
  */
-public class ForgetPasswordServlet extends HttpServlet {
+public class ToCreateServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ForgetPasswordServlet() {
+    public ToCreateServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -26,9 +26,12 @@ public class ForgetPasswordServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String path = "forget1.jsp";
-		RequestDispatcher dispatcher = request.getRequestDispatcher(path);
-		dispatcher.forward(request, response);
+		String username = request.getParameter("user");
+		request.setAttribute("user", username);
+		
+		String resultPage = "create.jsp";
+        RequestDispatcher dispatcher = request.getRequestDispatcher(resultPage);
+        dispatcher.forward(request, response);
 	}
 
 	/**

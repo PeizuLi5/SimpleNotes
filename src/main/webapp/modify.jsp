@@ -4,8 +4,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Create Notes</title>
+<title>Modify Note</title>
 </head>
+
+<%String user = (String) request.getAttribute("user");
+  String title = (String) request.getAttribute("title");
+  String content = (String) request.getAttribute("content");
+  int Nid = (int) request.getAttribute("Nid");%>
 
 <style>
 	.label{
@@ -44,30 +49,32 @@
 		background-color: gray;
 	}
 </style>
-	
-	<% String s = (String) request.getAttribute("user"); %>
-	
+
 <body>
-	<h1 align="center">Create Note</h1>
-	<form action="create" method="post">
-		<input type="hidden" name="user" value="<%=s.toString()%>">
+	<h1 align="center">Modify Note</h1>
+	<form action="modify" method="post">
+		<input type="hidden" name="user" value="<%=user.toString()%>">
+		<input type="hidden" name="Nid" value="<%=Nid%>">
 		<div align="center">
 			<label class="label" for="titleText">Title: </label>
-			<input class="textbox" type="text" id="titleText" name="title" />
+			<input class="textbox" type="text" id="titleText" name="title" value="<%=title%>"/>
 		</div>
 	    <br> <br>
 		<label class="label conLabel" for="contentText">Content: </label> <br>
 		<div align="center">
-			<textarea class="area" id="contentText" name="content" rows="30" cols="80"></textarea>
+			<textarea class="area" id="contentText" name="content" rows="30" cols="80"><%=content %></textarea>
 			<br> <br>
-			<button class="btn">Create</button>
+			<button class="btn">Save</button>
 		</div>
 	</form>
 	
 	<br>
 	
-	<form action="toMain" method="post">
-		<input type="hidden" name="user" value="<%=s.toString()%>">
+	<form action="toNote" method="post">
+		<input type="hidden" name="user" value="<%=user.toString()%>">
+		<input type="hidden" name="Nid" value="<%=Nid%>">
+		<input type="hidden" name="title" value="<%=title%>">
+		<input type="hidden" name="content" value="<%=content%>">
 		<div align="center">
 			<button class="btn">Back</button>
 		</div>

@@ -5,7 +5,6 @@ import java.io.PrintWriter;
 
 import Applications.DBUtils;
 import jakarta.servlet.RequestDispatcher;
-import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -29,8 +28,7 @@ public class VerifyServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		ServletContext servletContext = getServletContext();
-		String username = (String) servletContext.getAttribute("VerifyUser");
+		String username = (String) request.getParameter("user");
 		String answer = (String) request.getParameter("answer");
 		PrintWriter out = response.getWriter();
 		if(DBUtils.verifyAnswer(username, answer)) {

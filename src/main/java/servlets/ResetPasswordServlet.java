@@ -1,15 +1,13 @@
 package servlets;
 
-import jakarta.servlet.ServletContext;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
 import Applications.DBUtils;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 /**
  * Servlet implementation class ResetPasswordServlet
@@ -29,8 +27,7 @@ public class ResetPasswordServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		ServletContext servletContext = getServletContext();
-		String username = (String) servletContext.getAttribute("VerifyUser");
+		String username = (String) request.getParameter("user");
 		String newPassword = (String) request.getParameter("newPassword");
 		String reNewPassword = (String) request.getParameter("reNewpassword");
 		PrintWriter out = response.getWriter();

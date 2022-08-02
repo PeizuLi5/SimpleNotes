@@ -1,7 +1,10 @@
 package servlets;
 
 import java.io.IOException;
+import java.util.List;
 
+import Applications.DBUtils;
+import Applications.Note;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
@@ -9,15 +12,15 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class ForgetPasswordServlet
+ * Servlet implementation class ChangePasswordServlet
  */
-public class ForgetPasswordServlet extends HttpServlet {
+public class ChangePasswordServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ForgetPasswordServlet() {
+    public ChangePasswordServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -26,7 +29,21 @@ public class ForgetPasswordServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String path = "forget1.jsp";
+		String newPassword = request.getParameter("password");
+		String user = request.getParameter("user");
+		String oldPassword = request.getParameter("oldPassword");
+		
+		if(!newPassword.equals(oldPassword)) {
+			DBUtils.changePassword(user, newPassword);
+		}
+		
+		request.setAttribute("user", user);
+		List<Note> notes = DBUtils.getNotes(user);
+		if(notes != null) {
+			request.setAttribute("notes", notes);
+		}
+		
+		String path = "main.jsp";
 		RequestDispatcher dispatcher = request.getRequestDispatcher(path);
 		dispatcher.forward(request, response);
 	}

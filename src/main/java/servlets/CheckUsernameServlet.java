@@ -29,11 +29,12 @@ public class CheckUsernameServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String username = request.getParameter("username");
-		getServletContext().setAttribute("VerifyUser", username);
+		String question = DBUtils.getQuestion(username);
 		int result = DBUtils.checkUser(username);
 		PrintWriter out = response.getWriter();
 		if(result == 0) {
 			request.setAttribute("user", username);
+			request.setAttribute("question", question);
 			String path = "forget2.jsp";
 			RequestDispatcher dispatcher = request.getRequestDispatcher(path);
 			dispatcher.forward(request, response);

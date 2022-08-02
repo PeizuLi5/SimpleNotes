@@ -40,14 +40,15 @@
 
 <% 
 	String username = (String) request.getAttribute("user");
-	String question = DBUtils.getQuestion(username);
+	String question = (String) request.getAttribute("question");
 %>
 
 <body>
 	<h1 align="center">Forget Password</h1>
 	<div align="center">
 		<form action="verify" method="post">
-			<label class="label" for="questionText">Security Question: <%=question.toString() %></label> <br> <br>
+			<input type="hidden" name="user" value="<%=username.toString()%>"/>
+			<label class="label" for="questionText">Security Question: <%=question.toString()%></label> <br> <br>
 			<label class="label" for="answerText">Security Answer: </label>
 			<input class="textbox" type="text" id="answerText" name="answer" required /> <br> <br>
 		<button class="btn">Verify</button>

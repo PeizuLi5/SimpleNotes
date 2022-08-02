@@ -2,8 +2,10 @@ package servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 import Applications.DBUtils;
+import Applications.Note;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
@@ -59,6 +61,12 @@ public class LoginServlet extends HttpServlet {
 		if(result instanceof String) {
 			String resultString = (String) result;
 			request.setAttribute("user", resultString);
+			
+			List<Note> notes = DBUtils.getNotes(username);
+			if(notes != null) {
+				request.setAttribute("notes", notes);
+			}
+			
 			String path = "main.jsp";
 			RequestDispatcher dispatcher = request.getRequestDispatcher(path);
 			dispatcher.forward(request, response);

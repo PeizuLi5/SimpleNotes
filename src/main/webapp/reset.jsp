@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<script type="text/javascript" src="passwordFunction.js"></script>
 <title>Reset Password</title>
 </head>
 
@@ -61,6 +62,7 @@
 <body>
 	<h1 align="center">Reset Password</h1>
 	<form action="reset" method="post">
+		<input type="hidden" name="user" value="<%=(String) request.getAttribute("user")%>">
 		<label class="label" for="newPasswordText">New Password: </label>
 		<input class="textbox" type="password" id="newPasswordText" name="newPassword" required /> <br>
 		<input class="check box1" type="checkbox" onclick="displayPassword()">
@@ -79,26 +81,5 @@
 			<button class="btn backBtn">Home</button>
 		</form>
 	</div>
-	
-	<script>
-		function displayPassword(){
-			var password = document.getElementById("newPasswordText");
-			if(password.type == "password"){
-				password.type = "text";
-			}
-			else{
-				password.type = "password";
-			}
-		}
-		function displayPassword2(){
-			var password = document.getElementById("reNewPasswordText");
-			if(password.type == "password"){
-				password.type = "text";
-			}
-			else{
-				password.type = "password";
-			}
-		}
-	</script>
 </body>
 </html>

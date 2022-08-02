@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<script type="text/javascript" src="passwordFunction.js"></script>
 <title>Register Page</title>
 </head>
 
@@ -74,18 +75,6 @@
 				<button class="btn registerBtn">Register</button>
 			</div>
 		</form>
-		
-		<script>
-		function displayPassword(){
-			var password = document.getElementById("passwordText");
-			if(password.type == "password"){
-				password.type = "text";
-			}
-			else{
-				password.type = "password";
-			}
-		}
-	</script>
 		<br>
 		<div align="center">
 			<form action="back" method="post">

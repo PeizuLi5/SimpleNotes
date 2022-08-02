@@ -4,7 +4,7 @@
 
 ## Project Setup Requirements
 
-<li> IDE: Elicpse Eclipse IDE for Enterprise Java and Web Developers: Version 2022-03 (4.23.0) or above (<a href="https://www.eclipse.org/downloads/packages/release/2022-06/r/eclipse-ide-enterprise-java-and-web-developers">Link</a>)<br>
+<li> IDE: Elicpse Eclipse IDE for Enterprise Java and Web Developers: Version 2022-03 (4.23.0) or above (<a target="_blank" rel="noopener noreferrer" href="https://www.eclipse.org/downloads/packages/release/2022-06/r/eclipse-ide-enterprise-java-and-web-developers">Link</a>)<br>
 <img width="783" alt="Screen Shot 2022-08-01 at 7 35 19 PM" src="https://user-images.githubusercontent.com/98489037/182279483-c68d0cfd-fa35-4afb-9278-c279bb8af6a1.png">
 
 <li> Java version: Java 17 <br>

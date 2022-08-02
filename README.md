@@ -36,5 +36,17 @@
 <img width="558" alt="Screen Shot 2022-08-01 at 8 25 41 PM" src="https://user-images.githubusercontent.com/98489037/182285293-fb436382-6e40-472c-9fa5-fd27375d4217.png">
 <img width="881" alt="Screen Shot 2022-08-01 at 8 27 06 PM" src="https://user-images.githubusercontent.com/98489037/182285409-f3a6a600-7d8b-445c-bd76-2412246cca72.png">
 
+<li> Go to project property (SimpleNotes -> Properties)
+<ol> 
+  <li> Java Build Path: Modulepath -> Add JARs -> find ojdbc11.jar <br>
+  <img width="1021" alt="Screen Shot 2022-08-01 at 8 46 02 PM" src="https://user-images.githubusercontent.com/98489037/182287427-371200f4-9c76-4f01-b67c-743341d4f959.png">
+  <li> Java Build Path: JRE System Library -> Edit: Change JRE to JavaSE-17 if the current one is not <br>
+  <img width="293" alt="Screen Shot 2022-08-01 at 8 47 15 PM" src="https://user-images.githubusercontent.com/98489037/182287542-655a2d35-6a13-405b-aad2-189b277f759b.png"> <br>
+  <img width="879" alt="Screen Shot 2022-08-01 at 8 49 16 PM" src="https://user-images.githubusercontent.com/98489037/182287769-665f2599-a372-40bf-a858-39a034cd5d94.png">
+ <li> Java Build Path: Modulepath -> Add Library: Add the Apache Tomcat Server Runtime if it does not exists in Build Path <br>
+ <img width="1368" alt="Screen Shot 2022-08-01 at 8 52 10 PM" src="https://user-images.githubusercontent.com/98489037/182288090-975b0069-9de2-4b8d-a9f8-aca13782625b.png">
+ <li> Project Facets: Making sure the Project Facets looks like this. <br>
+<img width="431" alt="Screen Shot 2022-08-01 at 8 54 38 PM" src="https://user-images.githubusercontent.com/98489037/182288364-cefb83d6-4f0d-450e-8f79-fb256108c2e0.png">
+</ol>
 
-## 
+## Division of Works

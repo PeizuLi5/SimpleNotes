@@ -45,7 +45,7 @@
   <img width="879" alt="Screen Shot 2022-08-01 at 8 49 16 PM" src="https://user-images.githubusercontent.com/98489037/182287769-665f2599-a372-40bf-a858-39a034cd5d94.png">
  <li> Java Build Path: Modulepath -> Add Library: Add the Apache Tomcat Server Runtime if it does not exists in Build Path <br>
  <img width="1368" alt="Screen Shot 2022-08-01 at 8 52 10 PM" src="https://user-images.githubusercontent.com/98489037/182288090-975b0069-9de2-4b8d-a9f8-aca13782625b.png">
- <li> Project Facets: Making sure the Project Facets looks like this. <br>
+ <li> Project Facets: Making sure the Project Facets looks like this. (Dynamic Web Project Version 5.0)<br>
 <img width="431" alt="Screen Shot 2022-08-01 at 8 54 38 PM" src="https://user-images.githubusercontent.com/98489037/182288364-cefb83d6-4f0d-450e-8f79-fb256108c2e0.png">
 </ol>
 

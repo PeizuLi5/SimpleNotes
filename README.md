@@ -30,4 +30,6 @@
 
 <li> There is issue on running oracle 21c when using Apple M1 chips. Therefore, the computer that is running this project should be using an Intel processor.
 
+<li> Import project into the selected workspace in Eclipse
+
 ## 

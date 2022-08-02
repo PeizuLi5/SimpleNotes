@@ -50,3 +50,38 @@
 </ol>
 
 ## Division of Works
+<li> <b>Proporsal</b>
+<ol>
+  <li><b>Project Idea Comfirmation</b>: Lilai Yang
+  <li><b>Problem Statement</b>: Peizu Li
+  <li><b>Application Requirments</b>: Lilai Yang
+  <li><b>Functional Requirements & Database Requirements</b>: Zuocheng Li
+</ol>
+<li> <b>UI</b>
+<ol>
+  <li><b>Home Page</b>: Peizu Li
+  <li><b>Login Page</b>: Lilai Yang
+  <li><b>Register Page</b>: Peizu Li
+  <li><b>Forget Password Pages</b>: Zuocheng Li
+  <li><b>Main Page</b>: Lilai Yang, Peizu Li
+  <li><b>Note Pages</b>: Peizu Li
+  <li><b>Create Pages</b>: Peizu Li
+  <li><b>Share Page</b>: Zuocheng Li
+  <li><b>Modify Page</b>: Lilai Yang, Zuocheng Li
+  <li><b>Setting Page</b>: Zuocheng Li
+</ol>
+<li> <b>Database</b>
+<ol>
+  <li><b>Login Page</b>: Zuocheng Li
+  <li><b>Register Page</b>: Peizu Li
+  <li><b>Forget Password Pages</b>: Zuocheng Li, Peizu Li
+  <li><b>Main Page</b>: Lilai Yang, Peizu Li
+  <li><b>Note Pages</b>: Peizu Li
+  <li><b>Create Pages</b>: Peizu Li
+  <li><b>Share Page</b>: Lilai Yang
+  <li><b>Modify Page</b>: Peizu Li
+  <li><b>Setting Page</b>: Zuocheng Li
+</ol>
+<li> <b>Readme/Division of Works</b>: Peizu Li
+<li> <b>Presentation</b>: Lilai Yang
+<li> <b>Final Report</b>: Lilai Yang, Peizu Li, Zuocheng Li

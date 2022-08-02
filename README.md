@@ -72,6 +72,7 @@
 </ol>
 <li> <b>Database</b>
 <ol>
+  <li><b>Home Page</b>: Peizu Li
   <li><b>Login Page</b>: Zuocheng Li
   <li><b>Register Page</b>: Peizu Li
   <li><b>Forget Password Pages</b>: Zuocheng Li, Peizu Li

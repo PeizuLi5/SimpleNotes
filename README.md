@@ -30,6 +30,11 @@
 
 <li> There is issue on running oracle 21c when using Apple M1 chips. Therefore, the computer that is running this project should be using an Intel processor.
 
-<li> Import project into the selected workspace in Eclipse
+<li> After downloading the zip file and compressed it, remember to change the root file name to "SimpleNotes" if the display name is different. <br>
+
+<li> Import project into the selected workspace in Eclipse <br>
+<img width="558" alt="Screen Shot 2022-08-01 at 8 25 41 PM" src="https://user-images.githubusercontent.com/98489037/182285293-fb436382-6e40-472c-9fa5-fd27375d4217.png">
+<img width="881" alt="Screen Shot 2022-08-01 at 8 27 06 PM" src="https://user-images.githubusercontent.com/98489037/182285409-f3a6a600-7d8b-445c-bd76-2412246cca72.png">
+
 
 ## 
